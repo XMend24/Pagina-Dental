@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Odontológicos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Agendamiento de Consulta Odontológica</h1>
+    </header>
+    <main>
+        <form id="consultaForm">
+            <section>
+                <h2>Datos Personales del Paciente</h2>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" required>
+            </section>
+            <section>
+                <h2>Trabajo a Realizarse</h2>
+                <label><input type="checkbox" value="50" data-service="limpieza"> Limpieza ($50)</label>
+                <label><input type="checkbox" value="100" data-service="extraccion"> Extracción ($100)</label>
+                <label><input type="checkbox" value="200" data-service="ortodoncia"> Ortodoncia ($200)</label>
+            </section>
+            <section>
+                <h2>Fecha de Consulta</h2>
+                <input type="date" id="fecha" required>
+                <button type="button" id="verificarBtn">Verificar Disponibilidad</button>
+                <p id="disponibilidad"></p>
+            </section>
+            <section>
+                <h2>Cálculo de Pago</h2>
+                <p>Subtotal: $<span id="subtotal">0</span></p>
+                <p>IVA (12%): $<span id="iva">0</span></p>
+                <p>Total: $<span id="total">0</span></p>
+                <button type="submit">Agendar Consulta</button>
+            </section>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
