@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Configura Supabase (verifica claves)
-    const supabaseUrl = 'https://jpzczqmdhphjrlnhuwwi.supabase.co';  // Tu URL real
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpwemN6cW1kaHBoanJsbmh1d3dpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM2MTAzNTIsImV4cCI6MjA3OTE4NjM1Mn0.MC9r8DhAEH4nCu44WXjYsqj7lALbruipDfX5xQoWupk';  // Tu clave real
+    const supabaseUrl = 'https://jpzczqmdhphjrlnhuwwi.supabase.co'
+    const supabaseKey = process.env.SUPABASE_KEY
     const supabase = supabase.createClient(supabaseUrl, supabaseKey);
     
     console.log('Supabase inicializado:', supabase);  // Para debugging
