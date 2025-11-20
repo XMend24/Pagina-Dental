@@ -1,5 +1,5 @@
 // Configura Supabase (reemplaza con tus claves reales de supabase.com)
-const supabaseUrl = 'postgresql://postgres:[12345]@db.jpzczqmdhphjrlnhuwwi.supabase.co:5432/postgres';
+const supabaseUrl = 'https://jpzczqmdhphjrlnhuwwi.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpwemN6cW1kaHBoanJsbmh1d3dpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM2MTAzNTIsImV4cCI6MjA3OTE4NjM1Mn0.MC9r8DhAEH4nCu44WXjYsqj7lALbruipDfX5xQoWupk';
 const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
